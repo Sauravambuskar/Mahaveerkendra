@@ -68,12 +68,41 @@ Everything is plain HTML — edit the text directly between the tags.
 
 ---
 
-## 3. Publishing
+## 3. Deploying to Vercel
 
-Upload the folder as-is to any static host (Netlify, Vercel, GitHub Pages,
-Hostinger, cPanel). There is nothing to compile.
+The repository is ready to import — there is nothing to build.
 
-If the site will live at a real domain, update the `<link rel="canonical">` and
+1. Go to **vercel.com → Add New → Project**
+2. Import `Sauravambuskar/Mahaveerkendra`
+3. Leave every setting at its default:
+   - **Framework Preset:** Other
+   - **Root Directory:** `./`
+   - **Build Command:** *(empty)*
+   - **Output Directory:** *(empty)*
+4. Deploy
+
+There is no `package.json`, so Vercel serves the repository as static files.
+Every push to `main` then redeploys automatically.
+
+`vercel.json` sets:
+
+- `cleanUrls` — `/about` works as well as `/about.html`
+- long-lived immutable caching for the photographs and logo
+- `must-revalidate` on the CSS and JS, so edits to the phone number go live
+  immediately instead of being cached
+- `nosniff`, `Referrer-Policy` and `X-Frame-Options` headers
+
+`404.html` is picked up automatically as the not-found page.
+
+### Other hosts
+
+The folder also works as-is on Netlify, GitHub Pages, Hostinger or any cPanel
+host — upload it and you are done. Only `vercel.json` is Vercel-specific and is
+ignored elsewhere.
+
+### Custom domain
+
+If the site moves to a real domain, update the `<link rel="canonical">` and
 `og:image` URLs in the `<head>` of each page — they currently point at
 `https://mahaveerkendra.in/`.
 
