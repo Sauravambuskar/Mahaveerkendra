@@ -10,17 +10,17 @@ var KENDRA = {
 
   // Full number in international format, digits only. No +, no spaces.
   // Example for an Indian mobile 98765 43210  ->  "919876543210"
-  phone: '910000000000',
+  phone: '919351516186',
 
   // How the number should read on screen.
-  phoneDisplay: '+91 00000 00000',
+  phoneDisplay: '+91 93515 16186',
 
   /* ---------------------------------------------------------------------- */
 
   // Pre-filled text for the WhatsApp chat.
   waMessage: 'Jai Jinendra. I would like to know more about Shree Vardhaman Mahaveer Kendra, Sani Gaon, Abu Road.',
 
-  email: 'info@mahaveerkendra.in',
+  email: 'info@shreevardhamanmahaveerkendra.org',
 
   address: 'HPR6+P7C, opposite Chacha Museum, Sani Gaon, Abu Road, Rajasthan 307501',
   plusCode: 'HPR6+P7C'
