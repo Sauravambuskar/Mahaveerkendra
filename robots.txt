@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreevardhamanmahaveerkendra.org/sitemap.xml
