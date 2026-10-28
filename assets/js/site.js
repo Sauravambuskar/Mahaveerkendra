@@ -20,8 +20,6 @@ var KENDRA = {
   // Pre-filled text for the WhatsApp chat.
   waMessage: 'Jai Jinendra. I would like to know more about Shree Vardhaman Mahaveer Kendra, Sani Gaon, Abu Road.',
 
-  email: 'info@shreevardhamanmahaveerkendra.org',
-
   address: 'HPR6+P7C, opposite Chacha Museum, Sani Gaon, Abu Road, Rajasthan 307501',
   plusCode: 'HPR6+P7C'
 };
@@ -64,10 +62,16 @@ KENDRA.dirLink = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeU
       el.setAttribute('rel', 'noopener noreferrer');
     });
 
-    each('[data-mail]', function (el) { el.setAttribute('href', 'mailto:' + KENDRA.email); });
+    // There is no published email yet. Add `email:` to KENDRA above and any
+    // [data-mail] link starts working again.
+    if (KENDRA.email) {
+      each('[data-mail]', function (el) { el.setAttribute('href', 'mailto:' + KENDRA.email); });
+    }
 
     each('[data-phone-text]', function (el) { el.textContent = KENDRA.phoneDisplay; });
-    each('[data-mail-text]', function (el) { el.textContent = KENDRA.email; });
+    if (KENDRA.email) {
+      each('[data-mail-text]', function (el) { el.textContent = KENDRA.email; });
+    }
   }
 
   /* --- Sticky header shadow -------------------------------------------- */
