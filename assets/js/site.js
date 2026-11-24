@@ -10,10 +10,10 @@ var KENDRA = {
 
   // Full number in international format, digits only. No +, no spaces.
   // Example for an Indian mobile 98765 43210  ->  "919876543210"
-  phone: '917379349473',
+  phone: '919282452502',
 
   // How the number should read on screen.
-  phoneDisplay: '+91 73793 49473',
+  phoneDisplay: '+91 92824 52502',
 
   /* ---------------------------------------------------------------------- */
 
